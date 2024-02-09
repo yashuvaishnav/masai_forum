@@ -11,7 +11,9 @@ app.use(express.json())
 app.use(cors())
 app.use("/user", userRouter)
 app.use("/post", postRouter)
-
+app.use("/",(req,res)=>{
+    console.log("Server is running")
+})
 app.listen(process.env.port, async()=>{
     try {
         await connection
