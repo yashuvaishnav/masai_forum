@@ -12,7 +12,7 @@ app.use(cors())
 app.use("/user", userRouter)
 app.use("/post", postRouter)
 app.use("/",(req,res)=>{
-    console.log("Server is running")
+    res.send("Server is running at port 8080")
 })
 app.listen(process.env.port, async()=>{
     try {
